@@ -1,4 +1,7 @@
-<form action="{{url('article/store')}}" method="post">
+<form action="{{url('article/update')}}" method="post">
+	@foreach($errors->all() as $row)
+		<li>{{$row}}</li>
+	@endforeach
 	<input type="hidden" name="id" value="{{$article->id}}">
 	<table>
     <tbody>
